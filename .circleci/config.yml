@@ -1,3 +1,5 @@
+version: 2.1
+
 jobs:
   my-job:
     machine:
@@ -6,4 +8,9 @@ jobs:
     steps:
       - run: uname -a
       - run: echo "Hello, Arm!"
+
+workflows:
+  my-workflow:
+    jobs:
+      - my-job
 
